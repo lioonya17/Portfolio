@@ -1,0 +1,42 @@
+.contact {
+    display: flex;
+    background: url('/img/woman.jpg') right center no-repeat;
+
+    &__left {
+        width: 47%;
+        padding: 2rem;
+        @media ($tablet) {
+            width: 55%;
+        }
+        @media ($mobile) {
+            width: 60%;
+        }
+
+        @media ($mobile-sm) {
+            width: 100%;
+        }
+    }
+    
+    &__info {
+        margin: 2rem 0 3rem;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        color: $black;
+        font-weight: 300;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: .75rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-ico {
+            margin-right: .75rem;
+        }
+    }
+}

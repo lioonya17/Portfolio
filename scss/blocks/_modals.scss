@@ -1,0 +1,103 @@
+.modal {
+    display: none;
+    padding: 15px;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+
+    &.show {
+        display: flex;
+    }
+
+    &__dialog {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        background-color: #fff;
+        position: relative;
+
+        transform: scale(0,0);
+        transition: scale .2s linear;
+
+        &--sm {
+            max-width: 900px;
+        }
+
+        @media ($notebook) {
+            max-width: 991px;           
+        }
+
+        @media ($tablet) {
+            max-width: 767px;
+        }
+
+        @media ($mobile) {
+            max-width: 570px;
+        }
+
+    }
+
+    &__close {
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        background: none;
+        border: 0;
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        z-index: 2;
+        cursor: pointer;
+        transition: transform .2s linear;
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+
+        @media ($mobile) {
+            width: 24px;
+            height: 24px;
+        }
+        
+        @media ($mobile-sm) {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &__content {
+        padding: 5rem 1rem;
+        @media ($mobile) {
+            padding: 4rem 1.5rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3.6rem;
+        font-size: 3rem;
+        font-weight: 700;
+        color: $black;
+        text-transform: uppercase;
+
+        &--mbo {
+            margin-bottom: 0;
+        }
+
+        @media ($mobile) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $black;
+        font-weight: 400;
+    }
+}

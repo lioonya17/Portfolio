@@ -1,0 +1,192 @@
+.modal-work {
+    display: flex;
+    flex-wrap: wrap;
+    &__preview {
+        order: 1;
+        width: 65%;
+        position: relative;
+        overflow: hidden;
+        @media ($tablet) {
+            width: 55%;
+        }
+
+        @media ($mobile) {
+            width: 50%;
+        }
+    }
+
+    &__content {
+        order: 2;
+        position: relative;
+        width: 35%;
+        padding: 50px 100px 15px 26px;
+
+        @media ($tablet) {
+            width: 45%;
+        }
+
+        @media ($mobile) {
+            width: 50%;
+            padding: 30px 50px 15px 26px;
+        }
+
+        @media ($mobile-sm) {
+            padding: 40px 20px 15px 20px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 33px;
+    }
+
+    &__title {
+        margin-bottom: 4px;
+        font-size: 2.12rem;
+        color: $black;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @media ($tablet) {
+            font-size: 1.5rem;        
+        }
+
+        @media ($mobile) {
+            font-size: 1.2rem;
+        }
+
+        @media ($mobile-sm) {
+            font-size: .8rem;
+        }
+    }
+
+    &__info {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $gray;
+
+        @media ($tablet) {
+            font-size: 15px;        
+        }
+
+        @media ($mobile) {
+            font-size: 13px;
+        }
+
+        @media ($mobile-sm) {
+            font-size: 9px;
+        }
+
+        &-divider {
+            margin: 0 15px;
+
+            @media ($tablet) {
+                margin: 0 10px;
+            }
+
+            @media ($mobile) {
+                margin: 0 7px;
+            }
+
+            @media ($mobile-sm) {
+                margin: 0 4px;
+            }
+        }
+    }
+
+    &__client {
+        margin-bottom: 33px;
+        &-title {
+            font-size: 16px;
+            margin-bottom: 3px;
+            color: $black;
+            font-weight: 700;
+
+            @media ($mobile) {
+                font-size: 14px;
+            }
+            @media ($mobile-sm) {
+                font-size: 12px;
+            }
+        }
+
+        &-company {
+            font-size: 14px;
+            font-style: italic;
+            color: $gray;
+
+            @media ($mobile) {
+                font-size: 12px;
+            }
+
+            @media ($mobile-sm) {
+                font-size: 10px;
+            }
+        }
+
+        @media ($mobile) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 130px;
+        font-size: 12px;
+        line-height: 2;
+        color: $gray;
+        font-weight: 300;
+
+        @media ($tablet) {
+            font-size: 9px;
+        }
+
+        @media ($mobile) {
+            display: none;
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate3d(-50%,-50%, 0);
+        display: block;
+        height: auto; 
+        max-width: 100%; 
+
+    }
+
+    &__footer {
+        width: 100%;
+        padding: 0 27px 16px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        @media ($mobile-sm) {
+            padding: 0 10px 16px;
+        }
+    }
+
+    &__btn {
+        font-family: inherit;
+        cursor: pointer;
+        font-size: 14px;
+        color: $black;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        padding: 0;
+
+        @media ($mobile) {
+            font-size: 12px;
+        }
+
+        @media ($mobile-sm) {
+            font-size: 10px;
+        }
+    }
+}

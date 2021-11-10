@@ -1,0 +1,58 @@
+.progress-bar {
+    &__left {
+        width: 40%;
+
+        @media ($mobile-sm) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__item {
+        margin-bottom: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media ($mobile-sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 300;
+        color: $gray;
+        @media ($mobile) {
+            font-size: 12px;
+        }
+    }
+
+    &__right {
+        width: 50%;
+        padding-left: 18px;
+        @media ($mobile-sm) {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0;
+        }
+    }
+
+    &__bar {
+        max-width: 100%;
+        width: 139px;
+        height: 6px;
+        background-color: #efefef;
+
+        @media ($mobile) {
+            width: 100px;
+        }
+    }
+
+    &__progress {
+        height: 100%;
+        background-color: $gray;
+
+        transition: width .2s linear;
+    }
+}
